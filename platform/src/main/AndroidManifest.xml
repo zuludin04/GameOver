@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.zuludin.platform">
+
+    <application>
+        <activity
+            android:name="com.app.zuludin.platform.games.PlatformGamesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+</manifest>

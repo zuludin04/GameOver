@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_platform"
+    app:startDestination="@id/platform_game_fragment">
+
+    <fragment
+        android:id="@+id/platform_game_fragment"
+        android:name="com.app.zuludin.platform.games.PlatformGamesFragment">
+
+        <action
+            android:id="@+id/navPlatformToDetail"
+            app:destination="@id/detail_activity">
+
+            <argument
+                android:name="gameId"
+                android:defaultValue="1"
+                app:argType="integer" />
+
+        </action>
+
+    </fragment>
+
+    <activity
+        android:id="@+id/detail_activity"
+        android:name="com.app.zuludin.gameover.detail.GameDetailActivity"
+        android:label="Game Detail">
+
+        <argument
+            android:name="gameId"
+            android:defaultValue="1"
+            app:argType="integer" />
+
+    </activity>
+
+</navigation>

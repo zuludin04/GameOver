@@ -1,0 +1,9 @@
+include ':favorite'
+include ':navigation'
+include ':detail'
+include ':platform'
+include ':store'
+include ':home'
+include ':core'
+include ':app'
+rootProject.name = "Game Over"

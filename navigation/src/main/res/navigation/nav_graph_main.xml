@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/bottom_home">
+
+    <fragment
+        android:id="@+id/bottom_home"
+        android:name="com.app.zuludin.home.HomeFragment"
+        android:label="Home">
+
+        <action
+            android:id="@+id/navHomeToDetail"
+            app:destination="@+id/detail_activity">
+
+            <argument
+                android:name="gameId"
+                android:defaultValue="1"
+                app:argType="integer" />
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/bottom_platform"
+        android:name="com.app.zuludin.platform.list.PlatformFragment"
+        android:label="Platform">
+
+        <action
+            android:id="@+id/navPlatformToGames"
+            app:destination="@+id/platform_activity">
+
+            <argument
+                android:name="platformId"
+                android:defaultValue="1"
+                app:argType="integer" />
+
+            <argument
+                android:name="platformTitle"
+                android:defaultValue="Platform"
+                app:argType="string" />
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/bottom_store"
+        android:name="com.app.zuludin.store.list.StoreListFragment"
+        android:label="Store">
+
+        <action
+            android:id="@+id/navStoreToGames"
+            app:destination="@+id/store_activity">
+
+            <argument
+                android:name="storeId"
+                android:defaultValue="1"
+                app:argType="integer" />
+
+            <argument
+                android:name="storeTitle"
+                android:defaultValue="Store"
+                app:argType="string" />
+
+        </action>
+
+    </fragment>
+
+    <activity
+        android:id="@+id/store_activity"
+        android:name="com.app.zuludin.store.games.StoreGamesActivity"
+        android:label="Game Store">
+
+        <argument
+            android:name="storeId"
+            android:defaultValue="1"
+            app:argType="integer" />
+
+        <argument
+            android:name="storeTitle"
+            android:defaultValue="Store"
+            app:argType="string" />
+
+    </activity>
+
+    <activity
+        android:id="@+id/platform_activity"
+        android:name="com.app.zuludin.platform.games.PlatformGamesActivity"
+        android:label="Game Platform">
+
+        <argument
+            android:name="platformId"
+            android:defaultValue="1"
+            app:argType="integer" />
+
+        <argument
+            android:name="platformTitle"
+            android:defaultValue="Platform"
+            app:argType="string" />
+
+    </activity>
+
+    <activity
+        android:id="@+id/detail_activity"
+        android:name="com.app.zuludin.gameover.detail.GameDetailActivity"
+        android:label="Game Detail">
+
+        <argument
+            android:name="gameId"
+            android:defaultValue="1"
+            app:argType="integer" />
+
+    </activity>
+
+</navigation>

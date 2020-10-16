@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="age_rating">Age Rating</string>
+    <string name="developer">Developer</string>
+    <string name="platforms">Platforms</string>
+    <string name="website">Website</string>
+    <string name="available">Available At</string>
+    <string name="game_link"><u>%s</u></string>
+</resources>
